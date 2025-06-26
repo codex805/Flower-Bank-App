@@ -41,4 +41,8 @@ document.querySelector("#withdrawMoney").addEventListener("click", ()=>{
     alert("Insufficient balance.");
     return;
   }
+  balance -= amount;
+   updataBalance();
+   addTransation("Flower Bank App", amount);
+   amountInput.value = '';
 })
