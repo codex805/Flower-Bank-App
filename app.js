@@ -6,11 +6,11 @@ const historyList = document.querySelector("#history")
 //vrb selected
 
 //function diclar 
-function updataBalance(){
+function updateBalance(){
     balanceDisply.innerHTML = `$${balance}`;
 }
 
-function addTransation(type, amount){
+function addTransaction(type, amount){
     const li = document.createElement("li");
     li.className = 'list-group-item';
     const date = new Date().toLocaleString();
@@ -25,8 +25,8 @@ document.getElementById("#addMoney").addEventListener("click", ()=>{
         return;
     }
     balance += amount;
-    updataBalance();
-    addTransation("Add", amount);
+    updateBalance();
+    addTransaction()("Add", amount);
     amountInput.value = '';
 });
 
@@ -42,7 +42,7 @@ document.querySelector("#withdrawMoney").addEventListener("click", ()=>{
     return;
   }
   balance -= amount;
-   updataBalance();
-   addTransation("Flower Bank App", amount);
+   updateBalance();
+   addTransaction()("Withdraw", amount);
    amountInput.value = '';
 })
