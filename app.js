@@ -19,13 +19,18 @@ function addTransation(type, amount){
 }
 
 document.getElementById("#addMoney").addEventListener("click", ()=>{
-    const amout = parseFloat(amountInput.value);
-    if(isNaN(amout) || amout <=0){
+    const amount = parseFloat(amountInput.value);
+    if(isNaN(amount) || amount <=0){
         alert("Please enter a valid positive amount.");
         return;
     }
-    balance += amout;
+    balance += amount;
     updataBalance();
-    addTransation("Add", amout);
+    addTransation("Add", amount);
     amountInput.value = '';
+});
+
+
+document.querySelector("#withdrawMoney").addEventListener("click", ()=>{
+  const 
 })
